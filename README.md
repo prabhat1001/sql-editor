@@ -1,11 +1,8 @@
-# sql-editor
-It's a web-based application capable of running SQL queries and displaying the results of said query.
-
 # SQL Editor
 
 ### [Live Version](https://prabhat1001.github.io/sql-editor)
 
-A Web App For Basic SQL editor view to demonstrate where your users can query easily on a table using SQL and have ui components for the functionalities that can be added.
+It's a web-based application capable of running SQL queries and displaying the results of said query.
 
 ## Requirements
 
