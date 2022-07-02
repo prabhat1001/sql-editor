@@ -36,9 +36,7 @@ Page Load TIme has been calculated by using the [Lighthouse Tool](https://develo
 
 1. There was render blocking javascript for google font causing delay, used method mentioned [here](https://pagespeedchecklist.com/asynchronous-google-fonts) to overcome the problem.
 
-2. Import for `react-ace` editor was long tasks running during page load, Converted it to Lasy loaded component using `React.lazy()` for code-splitting and delaying it's loading.
-
-3. Only importing used Module in a component from library rather than importing whole library.
+2. Only importing used Module in a component from library rather than importing whole library.
 
 ## create-react-app
 
