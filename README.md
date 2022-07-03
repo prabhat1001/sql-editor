@@ -1,6 +1,6 @@
 # SQL Editor
 
-### [Live Version](https://prabhat1001.github.io/sql-editor)
+### [Live Version](https://sql-editor-six.vercel.app)
 
 It's a web-based application capable of running SQL queries and displaying the results of said query.
 
