@@ -11,6 +11,9 @@ It's a web-based application capable of running SQL queries and displaying the r
 ## Libraries Used
 
 - [React](https://reactjs.org/)
+```
+npm install --save styled components
+```
 - [Styled-Components](https://styled-components.com/)
 - [React-Ace](https://github.com/securingsincity/react-ace)
 
