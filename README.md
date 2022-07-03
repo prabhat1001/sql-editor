@@ -57,6 +57,13 @@ Page Load TIme has been calculated by using the [Lighthouse Tool](https://develo
 
 2. Only importing used Module in a component from library rather than importing whole library.
 
+3. Prevent browser from recording the cache memory using
+    ```
+    <meta http-equiv='cache-control' content='no-cache'>
+    <meta http-equiv='expires' content='0'>
+    <meta http-equiv='pragma' content='no-cache'>
+    ```
+
 ## create-react-app
 
 This project was bootstrapped with [Create React App](https://github.com/facebookincubator/create-react-app). You can find more information on how to perform common tasks [here](https://github.com/facebook/create-react-app/blob/master/packages/cra-template/template/README.md).
