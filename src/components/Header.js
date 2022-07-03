@@ -138,7 +138,7 @@ const Nav = styled.nav`
   z-index: 20;
 `;
 
-const Logo = styled.a`
+const Logo = styled.div`
   padding: 0;
   width: 150px;
   margin-top: 20px;
