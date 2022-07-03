@@ -11,7 +11,6 @@ It's a web-based application capable of running SQL queries and displaying the r
 ## Libraries and Dependencies Used
 
 - [React](https://reactjs.org/)
-- 
 
 - [Styled-Components](https://styled-components.com/)
     ```
