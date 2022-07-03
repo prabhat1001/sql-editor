@@ -29,6 +29,11 @@ It's a web-based application capable of running SQL queries and displaying the r
     npm install react-redux
     npm install @reduxjs/toolkit
     ```
+- [Firebase](rebase.google.com)
+    ```
+    npm install firebase
+    npm install -g firebase-tools   
+    ```
 
 
 ## How to run:
