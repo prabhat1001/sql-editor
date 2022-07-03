@@ -49,7 +49,9 @@ It's a web-based application capable of running SQL queries and displaying the r
 
 Page Load TIme has been calculated by using the [Lighthouse Tool](https://developers.google.com/web/tools/lighthouse).
 
-![img](https://user-images.githubusercontent.com/16102594/121433865-29e5ba80-c99a-11eb-84de-9043ecffc072.png)
+![performance-deployed](https://user-images.githubusercontent.com/71027441/177047413-a77d3de4-940f-4f25-8198-a3e902b5cf4c.png)
+![metrics](https://user-images.githubusercontent.com/71027441/177047421-0da3075e-effd-4f55-8ade-4f37c3d7872a.png)
+
 
 ### Steps taken to Optimize
 
