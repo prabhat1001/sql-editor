@@ -8,7 +8,7 @@ It's a web-based application capable of running SQL queries and displaying the r
 
 - npm
 
-## Libraries Used
+## Libraries and Dependencies Used
 
 - [React](https://reactjs.org/)
 - 
