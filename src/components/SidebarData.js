@@ -24,17 +24,17 @@ export const SidebarData = [
         iconOpened: <RiIcons.RiArrowUpSFill />, 
         subNav:[
             {
-                title: 'Table 1',
+                title: 'categories',
                 path: '/schema/table1',
                 icon: <RiIcons.RiDatabaseFill />,
             },
             {
-                title: 'Table 2',
+                title: 'regions',
                 path: '/schema/table2',
                 icon: <RiIcons.RiDatabaseFill />,
             },
             {
-                title: 'Table 3',
+                title: 'employees',
                 path: '/schema/table3',
                 icon: <RiIcons.RiDatabaseFill />,
             }
