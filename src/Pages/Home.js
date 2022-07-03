@@ -1,4 +1,4 @@
-import React from 'react'
+import React, {useState} from 'react'
 import styled from 'styled-components';
 import AceEditor from "react-ace";
 import QueryOutput from '../components/QueryOutput';
@@ -9,25 +9,82 @@ import "ace-builds/src-noconflict/ext-language_tools"
 
 import * as BsIcons from 'react-icons/bs'
 
+import Table1 from './Table1';
+import Table2 from './Table2';
+import Table3 from './Table3';
 
 function onChange(newValue) {
   console.log("change", newValue);
 }
 
+
+const ShowTable = ({count}) => {
+  switch(count%4){
+    case 1:
+      return(
+        <>
+          <Table1 />
+        </>
+      )
+
+      case 2 :
+      return(
+        <>
+          <Table2 />
+        </>
+      )
+
+      case 3 :
+      return(
+        <>
+          <Table3 />
+        </>
+      )
+
+      default :
+      return(
+        <>
+        </>
+      )
+    
+  }
+}
+
+
+
 const Home = () => {
+  
+
+  const [counter,setCounter] = useState(0);
+ 
+  const [query,setQuery] = useState();
+
+  // console.log(counter);
+
   return (
     <Wrap>
     <Leaves src="/images/leaves-transparent.png" alt="leaves" />
     <Container>
       <Nav>
-        <Run>
+
+        {/* Run button */}
+        <Run onClick={()=>{
+          if(counter > 2){
+            setCounter(1);
+          }
+          else{
+            setCounter(counter+1);
+          }}}>
           <Icon><BsIcons.BsFillPlayFill /></Icon>
           <Text>Run</Text>
         </Run>
+
+        {/* Save button */}
         <Save>
           <Icon> <BsIcons.BsFillSaveFill /></Icon>
           <Text>Save</Text>
         </Save>
+
       </Nav>
 
       {/* SQL Query Editor */}
@@ -46,12 +103,11 @@ const Home = () => {
           fontSize={14}
           showPrintMargin={true}
           showGutter={true}
-          highlightActiveLine={false}
-          value={`select * 
-    from <Table Name>`}
+          highlightActiveLine={true}
+          value={`  SELECT * FROM `}
           setOptions={{
           enableBasicAutocompletion: true,
-          enableLiveAutocompletion: false,
+          enableLiveAutocompletion: true,
           enableSnippets: true,
           showLineNumbers: true,
           tabSize: 5,
@@ -60,7 +116,9 @@ const Home = () => {
 
       {/* Query Output */}
       <OutputArea>
-         <QueryOutput />
+         <QueryOutput>
+           <ShowTable count = {counter} />
+         </QueryOutput>
       </OutputArea>
 
     </Container>
