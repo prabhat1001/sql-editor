@@ -1,20 +1,30 @@
-import styled from "styled-components";
-import {Link} from "react-router-dom";
-import { useDispatch, useSelector } from "react-redux";
-import { useNavigate } from "react-router-dom";
 import { useEffect } from "react";
-import { auth, provider, handleAuth} from "../firebase";
+import {Link, useNavigate } from "react-router-dom";
+
+//styled components imported
+import styled from "styled-components";
+
+//Hooks from react-redux imported
+import { useDispatch, useSelector } from "react-redux";
+
 import {selectUserName,selectUserPhoto, setSignOutState, setUserLoginDetails} from "../features/user/userSlice"
+
+// imports regarding firebase
+import { auth, provider, handleAuth} from "../firebase";
 import { getAuth, GoogleAuthProvider,signInWithPopup } from 'firebase/auth';
-import Sidebar from "./Sidebar";
+
+// //react-icons imported
 import * as IoIcons from 'react-icons/io'
 import * as RiIcons from 'react-icons/ri'
+
+//components and pages imported
+import Sidebar from "./Sidebar";
 
 
 const Header = (props)=>{
 
     const dispatch = useDispatch();
-    // here (navigate => history)
+    // (navigate is used in react router v18, in previous versions of react router dom 'history' was used)
     const history = useNavigate(); 
     const userName = useSelector(selectUserName);
     const userPhoto = useSelector(selectUserPhoto);
@@ -108,7 +118,7 @@ const Header = (props)=>{
 
 
 //=========================================== 
-//                  STYLING
+//       Styling of the Components
 //===========================================  
 
 const Nav = styled.nav`
@@ -220,8 +230,6 @@ const NavMenu = styled.div`
   }
 `;
 
-const Help = styled.button``;
-
 const Login = styled.div`
     cursor: pointer;
     background-color: rgba(10,198,69, 0.6);
@@ -238,7 +246,6 @@ const Login = styled.div`
         border-color: transparent;
     }
 `;
-
 
 const UserImg = styled.img`
   height: 100%;

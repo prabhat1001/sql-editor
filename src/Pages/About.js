@@ -1,7 +1,12 @@
 import React from 'react'
+
+//styled components imported
 import styled from 'styled-components'
+
+//react-icons imported
 import * as FcIcons from 'react-icons/fc'
 
+//About section of beanstack SQL 
 const About = () => {
   return (
     <Container>
@@ -19,6 +24,10 @@ const About = () => {
     </Container>
   )
 }
+
+//=====================================
+//    Styling of the Components
+//=====================================
 
 const Container = styled.div`
  margin-top: 90px;

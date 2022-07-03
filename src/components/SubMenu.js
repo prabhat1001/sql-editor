@@ -1,12 +1,16 @@
 import React, {useState} from 'react';
 import { Link } from 'react-router-dom';
+
+//styled components imported
 import styled from 'styled-components';
+
+//components and pages imported
 import Sidebar from './Sidebar';
 
+//This is for Submenu inside Schema section for different tables
 const SubMenu = ({item}) => {
 
     const [subnav, setSubnav] = React.useState(false);
-
     const showSubnav = () => setSubnav(!subnav);
 
     return (
@@ -31,6 +35,10 @@ const SubMenu = ({item}) => {
         </>
     );
 }
+
+//=====================================
+//    Styling of the Components
+//=====================================
 
 const SidebarLink = styled(Link)`
     display: flex;

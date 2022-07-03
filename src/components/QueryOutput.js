@@ -1,6 +1,9 @@
 import React,{UseState} from 'react'
+
+//styled components imported
 import styled from 'styled-components'
 
+//Area where queries are displayed
 const QueryOutput = (props) => {
 
   return (
@@ -9,6 +12,11 @@ const QueryOutput = (props) => {
     </Output>
   )
 }
+
+//=====================================
+//    Styling of the Components
+//=====================================
+
 const Output = styled.div`
  background-color: #fff;
  width: 100%;

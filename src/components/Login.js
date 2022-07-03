@@ -1,4 +1,7 @@
 import styled from 'styled-components';
+
+//Login page or Landing page
+
 const Login = (props) => {
     return(
         <Container>
@@ -16,6 +19,10 @@ const Login = (props) => {
         </Container>
     );
 };
+
+//=====================================
+//    Styling of the Components
+//=====================================
 
 const Container = styled.section`
     overflow: hidden;
@@ -56,7 +63,6 @@ const BgImage = styled.div`
     left:0;
     z-index:-1;
 `;
-
 
 const CTA = styled.div`
   max-width: 650px;

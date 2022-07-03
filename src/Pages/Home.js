@@ -1,23 +1,30 @@
 import React, {useState} from 'react'
-import styled from 'styled-components';
-import AceEditor from "react-ace";
-import QueryOutput from '../components/QueryOutput';
 
+//styled components imported
+import styled from 'styled-components';
+
+//react-icons imported
+import * as BsIcons from 'react-icons/bs'
+
+//imports for Query Editor
+import AceEditor from "react-ace";
 import "ace-builds/src-noconflict/mode-java";
 import "ace-builds/src-noconflict/theme-github";
 import "ace-builds/src-noconflict/ext-language_tools"
 
-import * as BsIcons from 'react-icons/bs'
-
+//components and pages imported
+import QueryOutput from '../components/QueryOutput';
 import Table1 from './Table1';
 import Table2 from './Table2';
 import Table3 from './Table3';
 
+
+//OnChange event
 function onChange(newValue) {
   console.log("change", newValue);
 }
 
-
+// Logic for showing tables 
 const ShowTable = ({count}) => {
   switch(count%4){
     case 1:
@@ -50,16 +57,10 @@ const ShowTable = ({count}) => {
   }
 }
 
-
-
 const Home = () => {
   
-
   const [counter,setCounter] = useState(0);
- 
   const [query,setQuery] = useState();
-
-  // console.log(counter);
 
   return (
     <Wrap>
@@ -89,32 +90,34 @@ const Home = () => {
 
       {/* SQL Query Editor */}
       <EditorWrap>
-          <AceEditor 
-          placeholder="Write query here ..."      
-          name="editor"
-          width="100%"
-          height="100%"
-          onLoad={editor => {
-            editor.once("change", function() {
-                editor.session.getUndoManager().reset();
-            });
-        }}
-          onChange={onChange}
-          fontSize={14}
-          showPrintMargin={true}
-          showGutter={true}
-          highlightActiveLine={true}
-          value={`  SELECT * FROM `}
-          setOptions={{
-          enableBasicAutocompletion: true,
-          enableLiveAutocompletion: true,
-          enableSnippets: true,
-          showLineNumbers: true,
-          tabSize: 5,
-          }}></AceEditor>
+        <AceEditor 
+            placeholder="Write query here ..."      
+            name="editor"
+            width="100%"
+            height="100%"
+            onLoad={editor => {
+              editor.once("change", function() {
+                  editor.session.getUndoManager().reset();
+              });
+            }}
+            onChange={onChange}
+            fontSize={14}
+            showPrintMargin={true}
+            showGutter={true}
+            highlightActiveLine={true}
+            value={`  SELECT * FROM `}
+            setOptions={{
+            enableBasicAutocompletion: true,
+            enableLiveAutocompletion: true,
+            enableSnippets: true,
+            showLineNumbers: true,
+            tabSize: 5,
+            }}>
+            
+        </AceEditor>
       </EditorWrap>
 
-      {/* Query Output */}
+      {/* Result of the Query(Tabular data will shown here)*/}
       <OutputArea>
          <QueryOutput>
            <ShowTable count = {counter} />
@@ -126,9 +129,13 @@ const Home = () => {
   )
 }
 
+//=====================================
+//    Styling of the Components
+//=====================================
+
 const Wrap = styled.div`
   display: flex;
-  width: 100%;
+  width: 100%;  
   height: 60vh;
 `;
 
@@ -163,16 +170,12 @@ const Nav = styled.nav`
   left: 0;
   right: 0;
   height: 70px;
-  /* background-color: rgba(0,102,45,255); */
-  /* background-color: #f9f9f9;
-  box-shadow: 0px 5px 10px rgba(0,0,0, 0.1); */
   display: flex;
   justify-content: space-between;
   align-items: center;
   padding: 0 36px;
   
 `;
-
 
 const Run = styled.div`
     cursor: pointer;

@@ -1,15 +1,20 @@
 import React, {useState} from 'react';
-import styled from 'styled-components';
 import {Link} from 'react-router-dom';
+
+//styled components imported
+import styled from 'styled-components';
+
+//react-icons imported
 import * as FaIcons from 'react-icons/fa';
-import * as AiIcons from 'react-icons/ai';
+
+
+//components and pages imported
 import { SidebarData } from './SidebarData';
 import SubMenu from './SubMenu';
 
 const Sidebar = () => {
 
   const [sidebar, setSidebar] = React.useState(false);
-
   const showSidebar = () => setSidebar(!sidebar);
 
   return (
@@ -19,11 +24,9 @@ const Sidebar = () => {
             <FaIcons.FaBars onClick={showSidebar} />
         </NavIcon>
     </Nav>
+    
     <SidebarNav sidebar={sidebar}>
         <SidebarWrap>
-            {/* <NavIcon to='#'>
-                <AiIcons.AiOutlineArrowLeft onClick={showSidebar} />
-            </NavIcon> */}
             {SidebarData.map((item, index) => {
                 return <SubMenu item={item} key ={index} />;
             })}
@@ -32,6 +35,10 @@ const Sidebar = () => {
     </>
   )
 }
+
+//=====================================
+//    Styling of the Components
+//=====================================
 
 const Nav = styled.div`
     background: #15171c;

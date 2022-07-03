@@ -1,5 +1,9 @@
 import React from 'react'
+
+//styled components imported
 import styled from 'styled-components';
+
+//react-icons imported
 import * as FcIcons from 'react-icons/fc'
 
 const Schema = () => {
@@ -14,6 +18,10 @@ const Schema = () => {
     </Container>
   )
 }
+
+//=====================================
+//    Styling of the Components
+//=====================================
 
 const Container = styled.div`
  margin-top: 90px;

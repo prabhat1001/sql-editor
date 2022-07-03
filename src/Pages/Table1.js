@@ -1,13 +1,17 @@
 import React,{useState, useEffect} from 'react'
+
+//Styling of the table
 import style from './Table.css';
+
+//import from firebase database
 import db from '../firebase'
 import { collection, doc, onSnapshot } from 'firebase/firestore';
 
+//CATEGORIES TABLE
 function Table1(){
 
      const [allDocs,setAllDocs] = useState([]);
-     // here i have used "[]" because we're getting data in an array of objects when we fetch all documents
-    
+     // here I have used "[]" because we're getting data in an array of objects when we fetch all documents
 
 
     useEffect(() => {
@@ -28,6 +32,7 @@ function Table1(){
         return a.categoryID - b.categoryID;
     })
 
+    //to display the content fetched from firestore in tabular format
   return (
     <div>
     <h2> Query Output </h2>
