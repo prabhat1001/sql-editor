@@ -11,11 +11,26 @@ It's a web-based application capable of running SQL queries and displaying the r
 ## Libraries Used
 
 - [React](https://reactjs.org/)
-```
-npm install --save styled components
-```
+- 
+
 - [Styled-Components](https://styled-components.com/)
+    ```
+    npm install --save styled components
+    ```
 - [React-Ace](https://github.com/securingsincity/react-ace)
+    ```
+    npm install react-ace ace-builds
+    ```
+- [React-Icons](https://react-icons.github.io/react-icons/)
+    ```
+    npm install react-icons
+    ```
+- [Redux](https://redux.js.org/)
+    ```
+    npm install react-redux
+    npm install @reduxjs/toolkit
+    ```
+
 
 ## How to run:
 
