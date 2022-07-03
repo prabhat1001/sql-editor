@@ -1,4 +1,5 @@
 import styled from "styled-components";
+import {Link} from "react-router-dom";
 import { useDispatch, useSelector } from "react-redux";
 import { useNavigate } from "react-router-dom";
 import { useEffect } from "react";
@@ -82,10 +83,10 @@ const Header = (props)=>{
                     <span> FEEDBACK</span>
                 </a>
 
-                < a href="/help">
+                <Link to="/help">
                     <IoIcons.IoMdHelpCircle />
                     <span> HELP</span>
-                </a>
+                </Link>
 
                 
 
@@ -218,6 +219,8 @@ const NavMenu = styled.div`
     display: none;
   }
 `;
+
+const Help = styled.button``;
 
 const Login = styled.div`
     cursor: pointer;
