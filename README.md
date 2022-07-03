@@ -8,11 +8,33 @@ It's a web-based application capable of running SQL queries and displaying the r
 
 - npm
 
-## Libraries Used
+## Libraries and Dependencies Used
 
 - [React](https://reactjs.org/)
+
 - [Styled-Components](https://styled-components.com/)
+    ```
+    npm install --save styled components
+    ```
 - [React-Ace](https://github.com/securingsincity/react-ace)
+    ```
+    npm install react-ace ace-builds
+    ```
+- [React-Icons](https://react-icons.github.io/react-icons/)
+    ```
+    npm install react-icons
+    ```
+- [Redux](https://redux.js.org/)
+    ```
+    npm install react-redux
+    npm install @reduxjs/toolkit
+    ```
+- [Firebase](rebase.google.com)
+    ```
+    npm install firebase
+    npm install -g firebase-tools   
+    ```
+
 
 ## How to run:
 
@@ -34,6 +56,13 @@ Page Load TIme has been calculated by using the [Lighthouse Tool](https://develo
 1. There was render blocking javascript for google font causing delay, used method mentioned [here](https://pagespeedchecklist.com/asynchronous-google-fonts) to overcome the problem.
 
 2. Only importing used Module in a component from library rather than importing whole library.
+
+3. Prevent browser from recording the cache memory using
+    ```
+    <meta http-equiv='cache-control' content='no-cache'>
+    <meta http-equiv='expires' content='0'>
+    <meta http-equiv='pragma' content='no-cache'>
+    ```
 
 ## create-react-app
 
